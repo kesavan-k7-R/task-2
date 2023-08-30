@@ -1,0 +1,24 @@
+| Country Name | Region | Sub-region | Population |
+| ------------ | ------ | ---------- | ---------- |
+| Afghanistan  | Asia   | Southern Asia | 38928346 |
+| Åland Islands | Europe | Northern Europe | 28875 |
+| Albania | Europe | Southern Europe | 2877797 |
+| Algeria | Africa | Northern Africa | 43851044 |
+| American Samoa | Oceania | Polynesia | 55191 |
+| Andorra | Europe | Southern Europe | 77265 |
+| Angola | Africa | Middle Africa | 32866272 |
+| Anguilla | Americas | Caribbean | 15003 |
+| Antarctica | Polar Regions | Antarctica | 1000 |
+| Antigua and Barbuda | Americas | Caribbean | 97929 |
+| Argentina | Americas | South America | 45195774 |
+| Armenia | Asia | Western Asia | 2963243 |
+| Aruba | Americas | Caribbean | 106766 |
+| Australia | Oceania | Australia and New Zealand | 25499884 |
+| Austria | Europe | Western Europe | 9006398 |
+| Azerbaijan | Asia | Western Asia | 10139177 |
+| Bahamas (the)	| Americas	| Caribbean	| 393244 |
+| Bahrain	| Asia	| Western Asia	| 1701575 |
+| Bangladesh	| Asia	| Southern Asia	| 164689383 |
+| Barbados	| Americas	| Caribbean	| 287375 |
+
+
