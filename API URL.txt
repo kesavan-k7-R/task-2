@@ -1,0 +1,24 @@
+# Import the requests and emoji modules
+import requests
+import emoji
+
+# Define the API URL
+api_url = "https://restcountries.com/v3.1/all"
+
+# Get the response from the API
+response = requests.get(api_url)
+
+# Check if the response is successful
+if response.status_code == 200:
+    # Parse the response as a JSON object
+    data = response.json()
+    # Loop through each country in the data
+    for country in data:
+        # Get the country name and flag
+        name = country["name"]["common"]
+        flag = country["flags"]["emoji"]
+        # Print the name and flag using emoji.emojize()
+        print(name, emoji.emojize(flag))
+else:
+    # Print an error message if the response is not successful
+    print("Something went wrong. Please try again later.")
