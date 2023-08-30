@@ -1,0 +1,51 @@
+There are different ways to compare two JSON objects in JavaScript, depending on how you define equality and what you want to achieve. Here are some possible methods:
+
+- **Using JSON.stringify()**: This method converts objects into equivalent JSON strings. You can then use any of the comparison operators to compare the strings. However, this method is sensitive to the order of the properties in the objects, so it will return false if the properties are in a different order, even if they have the same values. For example:
+
+```javascript
+let obj1 = {name: "Person 1", age:5};
+let obj2 = { age:5, name: "Person 1" };
+JSON.stringify(obj1) === JSON.stringify(obj2) // false
+```
+
+- **Using Lodash _.isEqual()**: This method is a library function that performs a deep comparison between two values to determine if they are equivalent. It does not care about the order of the properties in the objects, so it will return true if the properties have the same values, regardless of their order. For example:
+
+```javascript
+let obj1 = {name: "Person 1", age:5};
+let obj2 = { age:5, name: "Person 1" };
+_.isEqual(obj1, obj2) // true
+```
+
+You can learn more about Lodash and how to use it from [here](^7^).
+
+- **Using a custom function**: You can also write your own function to compare two JSON objects according to your own criteria. For example, you can loop over the keys of one object and check if they exist and have the same value in the other object. You can also handle nested objects, arrays, and other data types as you wish. For example:
+
+```javascript
+function deepEquals(o1, o2) {
+  // Check if both are objects
+  if (typeof o1 === "object" && typeof o2 === "object") {
+    // Check if both have the same number of keys
+    let keys1 = Object.keys(o1);
+    let keys2 = Object.keys(o2);
+    if (keys1.length !== keys2.length) return false;
+    // Check if each key exists and has the same value in both objects
+    for (let key of keys1) {
+      if (!o2.hasOwnProperty(key)) return false;
+      if (!deepEquals(o1[key], o2[key])) return false;
+    }
+    // If all checks pass, return true
+    return true;
+  } else {
+    // If not objects, compare by value
+    return o1 === o2;
+  }
+}
+
+let obj1 = {name: "Person 1", age:5};
+let obj2 = { age:5, name: "Person 1" };
+deepEquals(obj1, obj2) // true
+```
+
+You can find more examples and explanations of how to write your own function from [here](^5^).
+
+
